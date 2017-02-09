@@ -25,5 +25,6 @@ app.use(errorHandler({
   showStack: true
 }));
 
-console.log("Simple static server showing %s listening at http://%s:%s", publicDir, hostname, port);
-app.listen(port, hostname);
+app.listen(port, function(){
+  console.log("Simple static server showing %s listening at http://%s:%s", publicDir, hostname, port);
+});
